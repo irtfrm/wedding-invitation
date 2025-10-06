@@ -1,9 +1,12 @@
 @import "tailwindcss";
 
 @theme {
+    --breakpoint-xs: 25rem;
     --color-cream-200: #fff3d1;
     --color-cream-100: #ffeed3;
+    --color-cream-50: #fff9f2;
     --color-cyan: #a0d2de;
+    --color-gold: #dea22c;
     --font-serif: 'Noto Serif JP', "游明朝 Medium", "Yu Mincho Medium", "YuMincho Medium", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", serif;
     --font-script: "Ballet", cursive;
 }
