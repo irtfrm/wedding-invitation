@@ -6,5 +6,6 @@
 
 /* フォント調整（例：和文＋英字） */
 body {
-  font-family: 'Noto Sans JP', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Noto Serif JP', serif;
+    color: #292A2E;
 }
