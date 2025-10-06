@@ -5,6 +5,7 @@
     --color-cream-100: #ffeed3;
     --color-cyan: #a0d2de;
     --font-serif: 'Noto Serif JP', "游明朝 Medium", "Yu Mincho Medium", "YuMincho Medium", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", serif;
+    --font-script: "Ballet", cursive;
 }
 
 /* フォント調整（例：和文＋英字） */

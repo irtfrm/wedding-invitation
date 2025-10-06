@@ -3,29 +3,68 @@ import Base from "../layouts/Base.astro";
 ---
 <Base title="Tomoya & Rina Wedding Invitation">
     <section
-    class="flex items-center h-screen
+    class="flex flex-col items-center justify-center h-screen pb-25
            bg-gradient-to-b from-cream-200 from-55% via-cream-100 via-75% to-white to-90%">
 
-
+           <img
+           src="/images/flower1.png"
+           alt=""
+           class="mx-auto mt-6 w-[85%] h-auto select-none pointer-events-none"
+           loading="eager" decoding="async" />
     <img
       src="/images/title.svg"
       alt="Tomoya & Rina / Wedding Invitation / 2026.1.18  13:10 RECEPTION OPEN"
-      class="mx-auto my-6 w-[86%] max-w-[520px] sm:max-w-[600px] h-auto"
+      class="mx-auto my-6 w-[80%] h-auto"
+      loading="eager" decoding="async" />
+
+      <img
+      src="/images/flower2.png"
+      alt=""
+      class="mx-auto w-[88%] h-auto select-none pointer-events-none"
       loading="eager" decoding="async" />
 	</section>
   <section class="py-10 text-center">
-    <p class="mb-6">このたび私たちは結婚式を挙げることになりました。<br/>ご多忙のところ恐縮ですが、ぜひご出席ください。</p>
-    <a
-      href="https://forms.gle/mjUcVsJjaDKHzYyu7"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-block bg-rose-400 hover:bg-rose-500 text-white px-8 py-4 rounded-full text-lg shadow transition"
-    >
-      ご出席の回答フォームへ
-    </a>
+    <p class="mb-6">謹啓
+<br/>
+<br/>皆様におかれましては
+<br/>ますますご清祥のことと
+<br/>お慶び申し上げます
+<br/>
+<br/>このたび私たちは
+<br/>結婚式を挙げることになりました
+<br/>つきましては皆様により一層の
+<br/>ご指導を賜りたく
+<br/>ささやかではございますが披露宴を
+<br/>催したく存じます
+<br/>
+<br/>ご多用中誠に恐縮ではございますが
+<br/>ぜひご出席をいただきたく
+<br/>ご案内申し上げます
+<br/>
+<br/>謹白
+<br/>
+<br/>令和八年一月吉日
+<br/>
+<br/>古川智也
+<br/>荒瀬梨奈</p>
   </section>
 
-  <section class="py-20 text-center text-sm text-neutral-500">
+  <section class="py-10 text-center flex gap-10 flex-col items-center">
+    <h2 class="text-5xl font-script">Hosts</h2>
+    <div class="flex gap-10 items-center pl-15 text-lg"><div>古川 智也</div> <div class="h-40 w-40 rounded-full bg-cream-200"></div></div>
+    <div class="flex gap-10 items-center pr-15 text-lg"><div class="h-40 w-40 rounded-full bg-cream-200"></div><div>荒瀬梨奈</div></div>
+    <div class="flex gap-5 items-center flex-col"><div class="h-33 w-33 rounded-full bg-cream-200"></div><div>アンちゃん</div></div>
+  </section>
+
+  <section class="sticky bottom-0 py-5 text-center text-sm bg-gradient-to-b from-white/0 from-0% to-white to-60%">
+    <a
+    href="https://forms.gle/mjUcVsJjaDKHzYyu7"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-block bg-rose-400 hover:bg-rose-500 text-white px-8 py-4 mb-3 rounded-full text-lg shadow transition"
+  >
+    ご出欠の回答フォームへ
+  </a>
     <p>© 2025 Tomoya & Rina Wedding Invitation</p>
   </section>
 </Base>
