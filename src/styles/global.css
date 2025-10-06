@@ -15,3 +15,39 @@
 body {
     color: #292a2e;
 }
+
+@layer utilities {
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition-property: opacity, transform, filter;
+      transition-duration: 1100ms;
+      transition-timing-function: cubic-bezier(.22,.61,.36,1); /* しっとり */
+      will-change: opacity, transform;
+      filter: blur(2px);
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+      filter: blur(0);
+    }
+  
+    /* バリエーション（任意で使い分け） */
+    .reveal-fade      { transform: none; }                /* ただのフェード */
+    .reveal-up        { transform: translateY(150px); }
+    .reveal-down      { transform: translateY(-150px); }
+    .reveal-left      { transform: translateX(150px); }
+    .reveal-right     { transform: translateX(-150px); }
+    .reveal-zoom      { transform: scale(.96); }
+  
+    /* reduced motion: できるだけ動かさない */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .reveal.is-visible,
+      .reveal-up, .reveal-down, .reveal-left, .reveal-right, .reveal-zoom {
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+        filter: none !important;
+      }
+    }
+  }
