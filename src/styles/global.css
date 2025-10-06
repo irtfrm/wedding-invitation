@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+    --color-cream-200: #fff3d1;
+    --color-cream-100: #ffeed3;
+    --color-cyan: #a0d2de;
+    --font-serif: 'Noto Serif JP', "游明朝 Medium", "Yu Mincho Medium", "YuMincho Medium", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", serif;
+}
 
 /* フォント調整（例：和文＋英字） */
 body {
-    font-family: 'Noto Serif JP', serif;
-    color: #292A2E;
+    color: #292a2e;
 }

@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 const { title = "Tomoya & Rina Wedding Invitation" } = Astro.props;
 ---
 <html lang="ja">
@@ -6,14 +7,13 @@ const { title = "Tomoya & Rina Wedding Invitation" } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
-    <link rel="stylesheet" href="/src/styles/global.css" />
     <link
   href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap"
   rel="stylesheet"
 />
   </head>
-  <body class="bg-neutral-50 text-neutral-800 font-sans">
-    <main class="mx-auto px-4 py-8 max-w-[560px] sm:max-w-[640px] md:max-w-[720px]">
+  <body class="bg-cyan text-neutral-800 font-serif">
+    <main class="mx-auto max-w-[560px] bg-white">
       <slot />
     </main>
   </body>
