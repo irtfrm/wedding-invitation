@@ -1,16 +1,25 @@
 ---
-
+import Base from "../layouts/Base.astro";
 ---
+<Base title="Tomoya & Rina Wedding Invitation">
+  <section class="text-center py-16">
+    <h1 class="text-3xl font-semibold mb-2">Tomoya & Rina Wedding</h1>
+    <p class="text-neutral-600">2025年〇月〇日 @ キンプトン新宿東京</p>
+  </section>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  <section class="py-10 text-center">
+    <p class="mb-6">このたび私たちは結婚式を挙げることになりました。<br/>ご多忙のところ恐縮ですが、ぜひご出席ください。</p>
+    <a
+      href="https://docs.google.com/forms/your-form-link"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-block bg-rose-400 hover:bg-rose-500 text-white px-8 py-4 rounded-full text-lg shadow transition"
+    >
+      ご出席の回答フォームへ
+    </a>
+  </section>
+
+  <section class="py-20 text-center text-sm text-neutral-500">
+    <p>© 2025 Tomoya & Rina Wedding Invitation</p>
+  </section>
+</Base>

@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* フォント調整（例：和文＋英字） */
+body {
+  font-family: 'Noto Sans JP', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
