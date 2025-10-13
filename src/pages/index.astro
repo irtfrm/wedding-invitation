@@ -1,23 +1,26 @@
 ---
 import Base from "../layouts/Base.astro";
+import { Image } from 'astro:assets';
+import flower1 from "../images/flower1.png";
+import flower2 from "../images/flower2.png";
 ---
 <Base title="Tomoya & Rina Wedding Invitation">
     <section
     class="flex flex-col items-center justify-center h-screen pb-25
            bg-gradient-to-b from-cream-200 from-55% via-cream-100 via-75% to-white to-90%">
-           <img
-           src="/images/flower1.png"
-           alt=""
-           class="mx-auto mt-6 w-[95%] sm:w-[85%] h-auto select-none pointer-events-none"
-           loading="eager" decoding="async" />
-    <img
+      <Image
+      src={flower1}
+      alt=""
+      class="mx-auto mt-6 w-[95%] sm:w-[85%] h-auto select-none pointer-events-none"
+      loading="eager" decoding="async" />
+      <img
       src="/images/title.svg"
       alt="Tomoya & Rina / Wedding Invitation / 2026.1.18  13:10 RECEPTION OPEN"
       class="mx-auto my-6 w-[85%] sm:w-[80%] h-auto"
       loading="eager" decoding="async" />
 
-      <img
-      src="/images/flower2.png"
+      <Image
+      src={flower2}
       alt=""
       class="mx-auto w-[98%] sm:w-[88%] h-auto select-none pointer-events-none"
       loading="eager" decoding="async" />
