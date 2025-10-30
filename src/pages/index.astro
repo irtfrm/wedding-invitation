@@ -3,6 +3,8 @@ import Base from "../layouts/Base.astro";
 import { Image } from 'astro:assets';
 import flower1 from "../images/flower1.png";
 import flower2 from "../images/flower2.png";
+import tomoyaPic from "../images/125tf.jpg";
+import rinaPic from "../images/125rf.jpg";
 ---
 <Base title="Tomoya & Rina Wedding Invitation">
     <section
@@ -56,11 +58,11 @@ import flower2 from "../images/flower2.png";
     </div>
   </section>
 
-  <section class="py-20 text-center flex gap-10 flex-col items-center overflow-hidden">
+  <section class="py-20 text-center flex gap-12 flex-col items-center overflow-hidden">
     <h2 class="text-5xl font-script">Hosts</h2>
-    <div data-reveal data-once="true" class="reveal reveal-left flex gap-10 items-center pl-15 text-lg"><div>古川 智也</div> <div class="h-40 w-40 rounded-full bg-cream-200"></div></div>
-    <div data-reveal data-once="true" class="reveal reveal-right flex gap-10 items-center pr-15 text-lg"><div class="h-40 w-40 rounded-full bg-cream-200"></div><div>荒瀬 梨奈</div></div>
-    <div data-reveal data-once="true" class="reveal reveal-up flex gap-5 items-center flex-col"><div class="h-33 w-33 rounded-full bg-cream-200"></div><div>アンちゃん</div></div>
+    <div data-reveal data-once="true" class="reveal reveal-left flex gap-10 items-center pl-10 text-right text-2xl"><div>古川 智也 <br/><div class="mt-1 text-xs">Furukawa Tomoya</div></div> <Image src={tomoyaPic} alt="" class="size-44 rounded-full outline-2 outline-offset- outline-natural-800 shadow-lg shadow-orange-400/50"></Image></div>
+    <div data-reveal data-once="true" class="reveal reveal-right flex gap-10 items-center pr-10 text-left text-2xl"><Image src={rinaPic} alt="" class="size-44 rounded-full  outline-2 outline-offset- outline-natural-800 shadow-lg shadow-orange-400/50"></Image><div>荒瀬 梨奈 <br/><div class="mt-1 text-xs">Arase Rina</div></div></div>
+    <div data-reveal data-once="true" class="reveal reveal-up flex gap-5 items-center flex-col text-lg"><div class="size-37 rounded-full bg-cream-200 outline-2 outline-offset- outline-natural-800 shadow-lg shadow-orange-400/30"></div><div>アンちゃん <br> <div class="mt-1 text-xs">Anne</div></div></div>
   </section>
 
 
@@ -134,12 +136,11 @@ import flower2 from "../images/flower2.png";
 
   <section class="bottom-0 py-5 text-center text-sm">
     <a
-    href="https://forms.gle/mjUcVsJjaDKHzYyu7"
-    target="_blank"
+    href="/rsvp"
     rel="noopener noreferrer"
     class="inline-block bg-rose-400 hover:bg-rose-500 text-white px-8 py-4 mb-3 rounded-full text-lg shadow transition"
   >
-    ご出欠の回答フォームへ
+    ご出欠の回答へ
   </a>
   </section>
 </Base>

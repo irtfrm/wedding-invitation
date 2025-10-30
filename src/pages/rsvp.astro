@@ -2,18 +2,18 @@
 import Base from "../layouts/Base.astro";
 ---
 <Base title="Tomoya & Rina Wedding Invitation">
-<iframe name="rsvp_iframe" id="rsvp_iframe" style="display:none;"></iframe>
 <section class="pt-20 px-8 flex gap-10 flex-col items-center overflow-hidden">
-    <h2 class="text-4xl sm:text-5xl font-script">Presence or Absence</h2>
-    <div class="text-center text-base/8 bg-slate-100 p-5">
+  <h2 class="text-4xl sm:text-5xl font-script ">Presence or Absence</h2>
+    <div class="text-center text-base/8 bg-cream-100 p-5">
         お手数ですが 下記お日にち迄に<br>
-        出欠情報のご連絡をお願い申し上げます。
+        出欠のご連絡をお願い申し上げます。
         <div class="py-3 text-lg text-rose-700">2025年11月15日 [土]</div>
         期⽇までのご連絡が難しい場合には<br>
         ご一報いただけますと幸いです。
     </div>
     
     <form id="rsvpForm" method="POST" novalidate class="grid gap-4 w-full">
+
       <div class="text-sm text-rose-700">* は入力必須</div>
       <div>
         <label for="name" class="block text-sm mb-1">お名前 *</label>
@@ -25,6 +25,11 @@ import Base from "../layouts/Base.astro";
         <label for="email" class="block text-sm mb-1">メール *</label>
         <input id="email" name="email" type="email" required inputmode="email" autocomplete="email" class="w-full rounded-xl border p-3" />
         <p class="err text-rose-700 text-sm mt-1" data-for="email"></p>
+      </div>
+      <div>
+        <label for="tel" class="block text-sm mb-1">電話番号 *</label>
+        <input id="tel" name="tel" type="tel" required inputmode="tel" autocomplete="tel" class="w-full rounded-xl border p-3" />
+        <p class="err text-rose-700 text-sm mt-1" data-for="tel"></p>
       </div>
     
       <fieldset class="space-y-2">
@@ -40,7 +45,7 @@ import Base from "../layouts/Base.astro";
       </div>
     
       <div>
-        <label for="message" class="block text-sm mb-1">メッセージ</label>
+        <label for="message" class="block text-sm mb-1">新郎新婦へのメッセージ</label>
         <textarea id="message" name="message" maxlength="500" class="w-full rounded-xl border p-3"></textarea>
       </div>
     
@@ -53,9 +58,10 @@ import Base from "../layouts/Base.astro";
         <svg class="mr-3 -ml-1 size-5 animate-spin text-white hidden " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
         <div>送信する</div>
       </button>
-    
+      
       <div id="notice" role="status" aria-live="polite" class="text-sm"></div>
     </form>
+    <a href="/" class=" text-zinc-500 underline text-sm "> « 招待状に戻る</a>
 </section>
 </Base>
 
