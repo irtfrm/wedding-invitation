@@ -16,24 +16,24 @@ import Base from "../layouts/Base.astro";
 
       <div class="text-sm text-rose-700">* は入力必須</div>
       <div>
-        <label for="name" class="block text-sm mb-1">お名前 *</label>
+        <label for="name" class="block text-sm mb-1">お名前 <span class="text-rose-700">*</span></label>
         <input id="name" name="name" type="text" required minlength="2" maxlength="40" autocomplete="name" class="w-full rounded-xl border p-3" />
         <p class="err text-rose-700 text-sm mt-1" data-for="name"></p>
       </div>
     
       <div>
-        <label for="email" class="block text-sm mb-1">メール *</label>
+        <label for="email" class="block text-sm mb-1">メール <span class="text-rose-700">*</span></label>
         <input id="email" name="email" type="email" required inputmode="email" autocomplete="email" class="w-full rounded-xl border p-3" />
         <p class="err text-rose-700 text-sm mt-1" data-for="email"></p>
       </div>
       <div>
-        <label for="tel" class="block text-sm mb-1">電話番号 *</label>
+        <label for="tel" class="block text-sm mb-1">電話番号 <span class="text-rose-700">*</span></label>
         <input id="tel" name="tel" type="tel" required inputmode="tel" autocomplete="tel" class="w-full rounded-xl border p-3" />
         <p class="err text-rose-700 text-sm mt-1" data-for="tel"></p>
       </div>
     
       <fieldset class="space-y-2">
-        <legend class="block text-sm">ご出欠 *</legend>
+        <legend class="block text-sm">ご出欠 <span class="text-rose-700">*</span></legend>
         <label class="inline-flex items-center gap-2 mr-3"><input type="radio" name="rsvp" value="出席" class="rounded-full" required>出席</label>
         <label class="inline-flex items-center gap-2"><input type="radio" name="rsvp" value="欠席" class="rounded-full" required>欠席</label>
         <p class="err text-rose-700 text-sm mt-1" data-for="rsvp"></p>
