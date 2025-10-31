@@ -15,12 +15,37 @@ import Base from "../layouts/Base.astro";
     <form id="rsvpForm" method="POST" novalidate class="grid gap-4 w-full">
 
       <div class="text-sm text-rose-700">* は入力必須</div>
-      <div>
-        <label for="name" class="block text-sm mb-1">お名前 <span class="text-rose-700">*</span></label>
-        <input id="name" name="name" type="text" required minlength="2" maxlength="40" autocomplete="name" class="w-full rounded-xl border p-3" />
-        <p class="err text-rose-700 text-sm mt-1" data-for="name"></p>
+
+      <div class="flex gap-4">
+        <div>
+          <label for="surname" class="block text-sm mb-1">性 <span class="text-rose-700">*</span></label>
+          <input id="surname" name="surname" type="text" required maxlength="40" autocomplete="surname" class="w-full rounded-xl border p-3" />
+          <p class="err text-rose-700 text-sm mt-1" data-for="surname"></p>
+        </div>
+        <div>
+          <label for="firstname" class="block text-sm mb-1">名 <span class="text-rose-700">*</span></label>
+          <input id="firstname" name="firstname" type="text" required maxlength="40" autocomplete="firstname" class="w-full rounded-xl border p-3" />
+          <p class="err text-rose-700 text-sm mt-1" data-for="firstname"></p>
+        </div>
       </div>
-    
+      <div class="flex gap-4">
+        <div>
+          <label for="surname_rubi" class="block text-sm mb-1">せい <span class="text-rose-700">*</span></label>
+          <input id="surname_rubi" name="surname_rubi" type="text" required maxlength="40" autocomplete="surname_rubi" class="w-full rounded-xl border p-3" />
+          <p class="err text-rose-700 text-sm mt-1" data-for="surname_rubi"></p>
+        </div>
+        <div>
+          <label for="firstname_rubi" class="block text-sm mb-1">めい <span class="text-rose-700">*</span></label>
+          <input id="firstname_rubi" name="firstname_rubi" type="text" required maxlength="40" autocomplete="firstname_rubi" class="w-full rounded-xl border p-3" />
+          <p class="err text-rose-700 text-sm mt-1" data-for="firstname_rubi"></p>
+        </div>
+      </div>
+      <fieldset class="space-y-2">
+        <legend class="block text-sm">ご出欠 <span class="text-rose-700">*</span></legend>
+        <label class="inline-flex items-center gap-2 mr-3"><input type="radio" name="rsvp" value="出席" class="rounded-full" required>出席</label>
+        <label class="inline-flex items-center gap-2"><input type="radio" name="rsvp" value="欠席" class="rounded-full" required>欠席</label>
+        <p class="err text-rose-700 text-sm mt-1" data-for="rsvp"></p>
+      </fieldset>
       <div>
         <label for="email" class="block text-sm mb-1">メール <span class="text-rose-700">*</span></label>
         <input id="email" name="email" type="email" required inputmode="email" autocomplete="email" class="w-full rounded-xl border p-3" />
@@ -31,14 +56,6 @@ import Base from "../layouts/Base.astro";
         <input id="tel" name="tel" type="tel" required inputmode="tel" autocomplete="tel" class="w-full rounded-xl border p-3" />
         <p class="err text-rose-700 text-sm mt-1" data-for="tel"></p>
       </div>
-    
-      <fieldset class="space-y-2">
-        <legend class="block text-sm">ご出欠 <span class="text-rose-700">*</span></legend>
-        <label class="inline-flex items-center gap-2 mr-3"><input type="radio" name="rsvp" value="出席" class="rounded-full" required>出席</label>
-        <label class="inline-flex items-center gap-2"><input type="radio" name="rsvp" value="欠席" class="rounded-full" required>欠席</label>
-        <p class="err text-rose-700 text-sm mt-1" data-for="rsvp"></p>
-      </fieldset>
-    
       <div>
         <label for="allergy" class="block text-sm mb-1">アレルギー/食事制限</label>
         <textarea id="allergy" name="allergy" class="w-full rounded-xl border p-3"></textarea>
@@ -79,7 +96,7 @@ import Base from "../layouts/Base.astro";
   const START_AT = Date.now();
   const MIN_MS   = 100;       // 最低経過時間
   const TIMEOUT_MS = 12000;   // 12秒タイムアウト
-  const GAS_URL = 'https://script.google.com/macros/s/AKfycbw652D3BLkgpadqMgd0TLGiU5QP_sKe3q0-L0mtnYxPODPaNTFWEhAODN6D6cM5biTW/exec';
+  const GAS_URL = 'https://script.google.com/macros/s/AKfycbypa0IAeApuzfdEf11wWtxw-Eg3v5bGKDHBbZUXz8Uhjk9zKyyPFOo_fMY-X6DS0lPu/exec';
 
   // ★ 追加: 子要素を固定で取っておく（消さない運用にする）
   const SPINNER = BTN.querySelector('svg');
