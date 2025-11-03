@@ -29,7 +29,7 @@ import annePic from "../images/anne.jpg";
       alt=""
       class="mx-auto w-[98%] sm:w-[88%] h-auto select-none pointer-events-none"
       loading="eager" decoding="async" />
-	</section>
+    </section>
   <section class="pt-15 pb-12 px-5 sm:pt-35 text-center">
     <div data-reveal data-once="true" class="reveal reveal-zoom p-2 pt-18 bg-cream-50 shadow-(--my-shadow) bg-[url(/images/tile.png)] bg-repeat bg-size-[80px] relative z-0">
       <div class="p-3 max-w-[88%] min-w-[88%] translate-x-2 -translate-y-7/8 rotate-356 bg-cyan absolute z-1 shadow-(--my-shadow-3) ">
@@ -38,7 +38,7 @@ import annePic from "../images/anne.jpg";
         </div>
       </div>
       <div class="py-15 px-5 bg-cream-50 border-2 rounded-sm shadow-(--my-shadow-2) border-gold relative z-2">
-        <p class="text-base/8 xs:text-lg/8">謹啓
+        <p class="text-base/8 xs:text-lg/8 flex flex-col items-center">謹啓
           <br/>
           <br/>皆様におかれましては
           <br/>ますますご清祥のことと
@@ -61,7 +61,8 @@ import annePic from "../images/anne.jpg";
           <br/>
           <br/>古川智也
           <br/>荒瀬梨奈
-        </p>
+      <img src="images/flourisch.svg" alt="" class="w-16 mt-8 mb-2">
+    </p>
       </div>
     </div>
   </section>
@@ -69,7 +70,7 @@ import annePic from "../images/anne.jpg";
   <section class="mx-5 mb-5">
     <Image src={seiza} alt="" class="border border-natural-800"> </Image>
   </section>
-
+  
   <section class="py-20 text-center flex gap-12 flex-col items-center overflow-hidden">
     <h2 class="text-5xl font-script">Hosts</h2>
     <div data-reveal data-once="true" class="reveal reveal-left flex gap-10 items-center pl-0 xs:pl-10 text-right text-2xl"><div>古川 智也 <br/><div class="mt-1 text-xs">Furukawa Tomoya</div></div> <Image src={tomoyaPic} alt="" class="size-44 rounded-full outline-1 outline-natural-800 shadow-lg shadow-orange-400/50"></Image></div>
@@ -79,11 +80,13 @@ import annePic from "../images/anne.jpg";
 
 
   <section class="py-10 px-5">
-    <div class="py-8 border-3 border-gold text-center flex gap-5 flex-col items-center">
+    <div class="py-8 border-3 border-gold text-center flex gap-3 flex-col items-center">
       <h2 class="text-4xl text-gold font-script">Wedding Ceremony</h2>
-      <p class="text-lg">2026年1月18日 [日]</p>
+      <p class="text-lg my-5">2026年1月18日 [日]</p>
+      <hr class="h-px w-full border-0 bg-gold" >
       <h3 class="text-2xl font-bold font-sans">聖 婚 式</h3>
-      <div class="w-3/4 text-lg text-left grid grid-cols-7 gap-2">
+      <hr class="h-px w-full border-0 bg-gold" >
+      <div class="w-3/4 text-lg text-left grid grid-cols-7 gap-2 my-2">
         <span class="col-span-2">受　付</span>
         <span class="col-span-5">13:10</span>
         <span class="col-span-2">挙　式</span>
@@ -111,9 +114,12 @@ import annePic from "../images/anne.jpg";
         Googleカレンダーに追加
       </a>
       </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d510.08203702141384!2d139.70302710372314!3d35.73064439340377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d599ead44b3%3A0xfafad8407eeb5856!2z56uL5pWZ5a2m6Zmi6Ku46IGW5b6S56S85oud5aCC!5e0!3m2!1sja!2sjp!4v1759762310523!5m2!1sja!2sjp" class="w-5/6 h-40" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <h3 class="mt-10 text-2xl font-bold font-sans">披 露 宴</h3>
-      <div class="w-3/4 text-lg text-left grid grid-cols-7 gap-2">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d510.08203702141384!2d139.70302710372314!3d35.73064439340377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d599ead44b3%3A0xfafad8407eeb5856!2z56uL5pWZ5a2m6Zmi6Ku46IGW5b6S56S85oud5aCC!5e0!3m2!1sja!2sjp!4v1759762310523!5m2!1sja!2sjp" class="w-5/6 mt-3 mb-10 h-40 border" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <hr class="h-px w-full border-0 bg-gold" >
+      
+      <h3 class="text-2xl font-bold font-sans">披 露 宴</h3>
+      <hr class="h-px w-full border-0 bg-gold" >
+      <div class="w-3/4 text-lg text-left grid grid-cols-7 gap-2 my-2">
         <span class="col-span-2">受　付</span>
         <span class="col-span-5">15:30</span>
         <span class="col-span-2">開　始</span>
@@ -142,18 +148,19 @@ import annePic from "../images/anne.jpg";
         Googleカレンダーに追加
       </a>
       </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.6514811277025!2d139.68967637578794!3d35.68558267258585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d6357e86857%3A0x9828b30f6f3d39d8!2z44Kt44Oz44OX44OI44OzIOaWsOWuv-adseS6rA!5e0!3m2!1sja!2sjp!4v1759761727994!5m2!1sja!2sjp" class="w-5/6 h-40" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.6514811277025!2d139.68967637578794!3d35.68558267258585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d6357e86857%3A0x9828b30f6f3d39d8!2z44Kt44Oz44OX44OI44OzIOaWsOWuv-adseS6rA!5e0!3m2!1sja!2sjp!4v1759761727994!5m2!1sja!2sjp" class="w-5/6 h-40 border mt-3 mb-5" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
 
   <section class="bottom-0 py-5 text-center text-sm">
-    <div class="text-center text-base/8 bg-cream-100 p-5 mb-10">
+    <div class="text-center text-base/8 bg-cream-100 pt-2 pb-8 mb-10 flex flex-col items-center">
+      <img src="images/Bookman_Ornament_8401_(hourglass_and_book).svg" alt="" class="w-30 my-3 stroke-gold">
       お手数ですが 下記お日にち迄に<br>
       出欠のご連絡をお願い申し上げます。
       <div class="py-3 text-lg text-rose-700">2025年11月30日 [日]</div>
       期⽇までのご連絡が難しい場合には<br>
       ご一報いただけますと幸いです。
-  </div>
+    </div>
   
     <a
     href="/rsvp"
