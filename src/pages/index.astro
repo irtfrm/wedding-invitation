@@ -3,6 +3,8 @@ import Base from "../layouts/Base.astro";
 import { Image } from 'astro:assets';
 import flower1 from "../images/flower1.png";
 import flower2 from "../images/flower2.png";
+import invi from "../images/invi.jpg";
+import seiza from "../images/133tr.jpg";
 import tomoyaPic from "../images/125tf.jpg";
 import rinaPic from "../images/125rf.jpg";
 import annePic from "../images/anne.jpg";
@@ -17,9 +19,9 @@ import annePic from "../images/anne.jpg";
       class="mx-auto mt-6 w-[95%] sm:w-[85%] h-auto select-none pointer-events-none"
       loading="eager" decoding="async" />
       <img
-      src="/images/title.svg"
+      src="/images/title2.svg"
       alt="Tomoya & Rina / Wedding Invitation / 2026.1.18  13:10 RECEPTION OPEN"
-      class="mx-auto my-6 w-[85%] sm:w-[80%] h-auto"
+      class="mx-auto my-6 w-[90%] sm:w-[80%] h-auto"
       loading="eager" decoding="async" />
 
       <Image
@@ -28,9 +30,14 @@ import annePic from "../images/anne.jpg";
       class="mx-auto w-[98%] sm:w-[88%] h-auto select-none pointer-events-none"
       loading="eager" decoding="async" />
 	</section>
-  <section class="py-10 px-5 text-center">
-    <div data-reveal data-once="true" class="reveal reveal-zoom p-2 bg-cream-50 shadow-xl/5 bg-[url(/images/tile.svg)] bg-repeat bg-size-[80px]">
-      <div class="py-15 px-5 bg-cream-50 border-2 rounded-sm shadow-lg/20 border-gold">
+  <section class="pt-15 pb-12 px-5 sm:pt-35 text-center">
+    <div data-reveal data-once="true" class="reveal reveal-zoom p-2 pt-18 bg-cream-50 shadow-(--my-shadow) bg-[url(/images/tile.png)] bg-repeat bg-size-[80px] relative z-0">
+      <div class="p-3 max-w-[88%] min-w-[88%] translate-x-2 -translate-y-7/8 rotate-356 bg-cyan absolute z-1 shadow-(--my-shadow-3) ">
+        <div class="p-1 bg-white shadow-(--my-shadow-3)">
+          <Image src={invi} alt="" loading="eager" decoding="async"></Image>
+        </div>
+      </div>
+      <div class="py-15 px-5 bg-cream-50 border-2 rounded-sm shadow-(--my-shadow-2) border-gold relative z-2">
         <p class="text-base/8 xs:text-lg/8">謹啓
           <br/>
           <br/>皆様におかれましては
@@ -57,6 +64,10 @@ import annePic from "../images/anne.jpg";
         </p>
       </div>
     </div>
+  </section>
+
+  <section class="mx-5 mb-5">
+    <Image src={seiza} alt="" class="border border-natural-800"> </Image>
   </section>
 
   <section class="py-20 text-center flex gap-12 flex-col items-center overflow-hidden">

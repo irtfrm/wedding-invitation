@@ -9,7 +9,10 @@
     --color-gold: #dea22c;
     --font-serif: 'Noto Serif JP', "游明朝 Medium", "Yu Mincho Medium", "YuMincho Medium", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", serif;
     --font-sans: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Arial", "Yu Gothic", "Meiryo", sans-serif;
-    --font-script: "Ballet", cursive;
+    --font-script: "Ballet", "Zapfino", "Snell Roundhand", "Apple Chancery", "Segoe Script", "Lucida Handwriting", "Brush Script MT", cursive;
+    --my-shadow: 0 7px 18px -9px rgba(0, 0, 20, 0.7);
+    --my-shadow-2: 0 1px 3px 0px rgba(0, 0, 20, 1);
+    --my-shadow-3: 0 3px 3px 0px rgba(0, 0, 20, 1);
 }
 
 /* フォント調整（例：和文＋英字） */
