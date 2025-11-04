@@ -2,9 +2,9 @@
 import Base from "../layouts/Base.astro";
 ---
 <Base title="Tomoya & Rina Wedding Invitation">
-<section class="pt-15 px-8 flex gap-10 flex-col items-center overflow-hidden">
+<section class="pt-15 px-6 flex gap-10 flex-col items-center overflow-hidden">
   <h2 class="text-4xl sm:text-5xl font-script ">Presence or Absence</h2>
-    <div class="text-center text-base/8 bg-cream-100 pt-2 pb-8 px-6 flex flex-col items-center">
+    <div class="text-center text-base/8 bg-cream-100 pt-2 pb-8 px-6 flex flex-col items-center  border border-neutral-800">
       <img src="/images/Bookman_Ornament_8401_(hourglass_and_book).svg" alt="" class="w-30 my-3 stroke-gold">
       お手数ですが 下記お日にち迄に<br>
         出欠のご連絡をお願い申し上げます。
@@ -77,10 +77,10 @@ import Base from "../layouts/Base.astro";
         <div>送信する</div>
       </button>
       
-      <div id="notice" role="status" aria-live="polite" class="text-sm"></div>
+      <div id="notice" role="status" aria-live="polite" class="text-sm/7 my-2"></div>
     </form>
-    <a href="/" class=" text-zinc-500 underline text-sm "> « 招待状に戻る</a>
-</section>
+  </section>
+  <a href="/" class="flex flex-col items-center text-zinc-500 underline text-sm my-2"> « 招待状に戻る</a>
 </Base>
 
 <style>
@@ -169,18 +169,18 @@ import Base from "../layouts/Base.astro";
       SPINNER?.classList.add('hidden');
 
       const rsvpValue = FORM.querySelector('input[name="rsvp"]:checked')?.value;
+      const surnameValue = FORM.querySelector('input[name="surname"]')?.value;
       
       if (rsvpValue === '出席') {
-        NOTICE.innerText = 'ご出席のご連絡ありがとうございます！\n当日お会いできることを楽しみにしております。';
+        NOTICE.innerText = surnameValue + 'さん\nご出席のご連絡ありがとうございます！\n当日お会いできることを楽しみにしております。';
       } else if (rsvpValue === '欠席') {
-        NOTICE.innerText = 'ご連絡ありがとうございます！\nまた別の機会にお目にかかれることを楽しみにしております。';
+        NOTICE.innerText = surnameValue + 'さん\nご連絡ありがとうございます！\nまた別の機会にお目にかかれることを楽しみにしております。';
       } else {
         NOTICE.textContent = 'ご回答ありがとうございます！';
       }
       if (!success) {
         NOTICE.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
         BTN.classList.remove('is-disabled');
-        FORM.reset();
       }
       submitted = false;
     };
