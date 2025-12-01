@@ -214,15 +214,33 @@ import Base from "../layouts/Base.astro";
   
 <script>
   (function () {
-    const el = document.getElementById('rsvp-deadline');
-    if (!el) return;
-
+    // ===== Query取得 =====
     const params = new URLSearchParams(window.location.search);
-    const deadlineParam = params.get('deadline'); // 例: 2025-12-05
+    const encoded = params.get("d"); // Base64 encoded
 
-    if (!deadlineParam) return;
+    // 要素
+    const el = document.getElementById("rsvp-deadline");
 
-    const date = new Date(deadlineParam);
+    if (!encoded) return;  // パラメータなし → デフォルト表示
+
+    // ===== Base64 decode =====
+    let decoded = "";
+    try {
+      // URL-safe のためにパディング・置換を補正
+      const normalized = encoded.replace(/-/g, "+").replace(/_/g, "/");
+      decoded = atob(normalized);
+    } catch (e) {
+      console.warn("Invalid deadline encoding", e);
+      return;
+    }
+
+    // decoded = "2025-11-30"
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(decoded)) {
+      console.warn("Invalid date format");
+      return;
+    }
+
+    const date = new Date(decoded);
     if (Number.isNaN(date.getTime())) {
       // 変な値が来たときは無視してデフォルト表示のまま
       return;
