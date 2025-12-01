@@ -8,7 +8,7 @@ import Base from "../layouts/Base.astro";
       <img src="/images/Bookman_Ornament_8401_(hourglass_and_book).svg" alt="" class="w-30 my-3 stroke-gold">
       お手数ですが 下記お日にち迄に<br>
         出欠のご連絡をお願い申し上げます。
-        <div class="py-3 text-lg text-rose-700">2025年11月30日 [日]</div>
+        <div class="py-3 text-lg text-rose-700" id="rsvp-deadline">2025年11月30日 [日]</div>
         期⽇までのご連絡が難しい場合には<br>
         ご一報いただけますと幸いです。
     </div>
@@ -80,7 +80,7 @@ import Base from "../layouts/Base.astro";
       <div id="notice" role="status" aria-live="polite" class="text-sm/7 my-2"></div>
     </form>
   </section>
-  <a href="/" class="flex flex-col items-center text-zinc-500 underline text-sm my-2"> « 招待状に戻る</a>
+  <a href="/" id="rsvp-link" class="flex flex-col items-center text-zinc-500 underline text-sm my-2"> « 招待状に戻る</a>
 </Base>
 
 <style>
@@ -212,3 +212,35 @@ import Base from "../layouts/Base.astro";
 })();
 </script>
   
+<script>
+  (function () {
+    const el = document.getElementById('rsvp-deadline');
+    if (!el) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const deadlineParam = params.get('deadline'); // 例: 2025-12-05
+
+    if (!deadlineParam) return;
+
+    const date = new Date(deadlineParam);
+    if (Number.isNaN(date.getTime())) {
+      // 変な値が来たときは無視してデフォルト表示のまま
+      return;
+    }
+
+    const youbi = ['日', '月', '火', '水', '木', '金', '土'][date.getDay()];
+    const y = date.getFullYear();
+    const m = date.getMonth() + 1; // 0始まりなので +1
+    const d = date.getDate();
+
+    el.textContent = `${y}年${m}月${d}日 [${youbi}]`;
+
+    const rsvpLink = document.getElementById('rsvp-link');
+    if (rsvpLink) {
+      const query = window.location.search; // "?deadline=2025-12-05"
+      if (query) {
+        rsvpLink.href = `/${query}`;
+      }
+    }
+  })();
+</script>
